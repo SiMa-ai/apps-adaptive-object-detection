@@ -1,0 +1,7 @@
+# CMake build tree.
+build/
+# Model packs are fetched from the release, never committed.
+models/
+# Python bytecode.
+__pycache__/
+*.pyc
