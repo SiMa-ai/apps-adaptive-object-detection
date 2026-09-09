@@ -7,12 +7,8 @@ resolution and frame rate live.
 
 ## What you need
 
-**This is not a laptop application.** It requires:
-
 - a **SiMa.ai Modalix DevKit** — detection runs on the board
 - a **Neat SDK container** on a host the board can reach over the network
-- an **NFS mount** exporting the container's workspace to the board at the same
-  absolute path on both sides
 
 There is no way to run this without the board.
 
@@ -78,7 +74,7 @@ default and needs nothing extra; C++ becomes available once you
 ![Live-Add control panel](docs/live-add-panel.png)
 
 **Add cameras.** Paste RTSP URLs into the box on the left, one per line, and
-click **Add camera(s)**. Resolution is detected for you.
+click **Add camera(s)**. You can mix with any resolution.  Resolution is detected for you.
 
 **Or use video files.** Pick clips from **Insight videos** on the right and
 click **Add selected video(s)** — Ctrl or Cmd-click for several. To add a new
