@@ -45,10 +45,12 @@ Then open **`http://<board-ip>:8080/`**.
   into `models/` at the repository root (gitignored, so it is never committed):
 
   ```bash
-  mkdir -p models
-  curl -L -o models/yolo26n-det-int8-b1.tar.gz \
-    https://github.com/SiMa-ai/apps-adaptive-object-detection/releases/download/v1.0.0/yolo26n-det-int8-b1.tar.gz
+  mkdir -p models && cd models
+  sima-cli modelzoo get yolo_26n
+  cd ..
   ```
+
+  That writes `yolo_26n_mpk.tar.gz` — the name the pipelines look for.
 - **Insight media, named by prefix.** The tier table picks sources by filename:
   `2160p_*` for 4K, `1080p_*` for 1080p, `video*` for 720p. With an empty or
   differently-named library every `up` fails with `no '<prefix>*' media in

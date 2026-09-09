@@ -86,7 +86,7 @@ class AppConfig:
     # and drops the rest (drop-on-latency). This does NOT cap the video sent to
     # Insight - passthrough forwards the full-rate source untouched. 0 = uncapped.
     decoder_fps_cap: int = 30
-    min_score: float = 0.55
+    min_score: float = 0.60
     nms_iou: float = 0.60
     max_detections: int = 50
     profile: bool = False
@@ -330,7 +330,7 @@ def load_app_config(config_path: Path) -> AppConfig:
         fps=int_or(inference, "fps", 0),
         max_inflight_per_stream=int_or(inference, "max_inflight_per_stream", 4),
         max_inflight_total=int_or(inference, "max_inflight_total", 16),
-        min_score=float_or(inference, "min_score", 0.55),
+        min_score=float_or(inference, "min_score", 0.60),
         nms_iou=float_or(inference, "nms_iou", 0.60),
         max_detections=int_or(inference, "max_detections", 50),
         profile=bool_or(runtime, "profile", False),

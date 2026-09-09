@@ -72,7 +72,7 @@ class AppConfig:
     tcp: bool = True
     frames: int = 0
     fps: int = 0
-    min_score: float = 0.30
+    min_score: float = 0.60
     nms_iou: float = 0.60
     max_detections: int = 50
     profile: bool = False
@@ -243,7 +243,7 @@ def load_app_config(config_path: Path) -> AppConfig:
         tcp=bool_or(input_cfg, "tcp", True),
         frames=int_or(inference, "frames", 0),
         fps=int_or(inference, "fps", 0),
-        min_score=float_or(inference, "min_score", 0.30),
+        min_score=float_or(inference, "min_score", 0.60),
         nms_iou=float_or(inference, "nms_iou", 0.60),
         max_detections=int_or(inference, "max_detections", 50),
         profile=bool_or(runtime, "profile", False),

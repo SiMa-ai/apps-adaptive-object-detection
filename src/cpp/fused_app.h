@@ -100,7 +100,7 @@ struct AppConfig {
   int fps = 0;
   int max_inflight_per_stream = 4;
   int max_inflight_total = 16;
-  double min_score = 0.55;
+  double min_score = 0.60;
   double nms_iou = 0.60;
   int max_detections = 50;
   bool profile = false;
@@ -338,7 +338,7 @@ AppConfig load_app_config(const fs::path& config_path) {
   cfg.fps = raw.int_or("inference.fps", 0);
   cfg.max_inflight_per_stream = raw.int_or("inference.max_inflight_per_stream", 4);
   cfg.max_inflight_total = raw.int_or("inference.max_inflight_total", 16);
-  cfg.min_score = raw.double_or("inference.min_score", 0.55);
+  cfg.min_score = raw.double_or("inference.min_score", 0.60);
   cfg.nms_iou = raw.double_or("inference.nms_iou", 0.60);
   cfg.max_detections = raw.int_or("inference.max_detections", 50);
   cfg.profile = raw.bool_or("runtime.profile", false);

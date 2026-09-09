@@ -93,7 +93,7 @@ struct AppConfig {
   bool tcp = true;
   int frames = 0;
   int fps = 0;
-  double min_score = 0.30;
+  double min_score = 0.60;
   double nms_iou = 0.60;
   int max_detections = 50;
   bool profile = false;
@@ -349,7 +349,7 @@ AppConfig load_app_config(const fs::path& config_path) {
   cfg.latency_ms = raw.int_or("input.latency_ms", 100);
   cfg.frames = raw.int_or("inference.frames", 0);
   cfg.fps = raw.int_or("inference.fps", 0);
-  cfg.min_score = raw.double_or("inference.min_score", 0.30);
+  cfg.min_score = raw.double_or("inference.min_score", 0.60);
   cfg.nms_iou = raw.double_or("inference.nms_iou", 0.60);
   cfg.max_detections = raw.int_or("inference.max_detections", 50);
   cfg.profile = raw.bool_or("runtime.profile", false);

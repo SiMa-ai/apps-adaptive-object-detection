@@ -150,7 +150,7 @@ def set_language(value: str) -> dict:
     if value not in LANGUAGES:
         return {"error": f"language must be one of {LANGUAGES}"}
     if value == "cpp" and cpp_binary() is None:
-        return {"error": "C++ binary not found - see Building in the README",
+        return {"error": "C++ binary not found - see BUILDING.md",
                 "language": language()}
     # A detector already running was started in the OLD language; stop them all
     # so the next Start actually uses the new one.

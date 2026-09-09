@@ -1,7 +1,6 @@
 model:
-  # int8 is the default because it is what the published numbers were measured on;
-  # yolo26n-det-bf16-mla_tess-b1.tar.gz is a drop-in swap if you want bf16.
-  path: models/yolo26n-det-int8-b1.tar.gz
+  # Fetched with: sima-cli modelzoo get yolo_26n
+  path: models/yolo_26n_mpk.tar.gz
   labels: src/common/coco_label.txt
 
 
@@ -21,7 +20,7 @@ input:                           # RTSP input transport settings.
 inference:                       # Detection controls.
   frames: 0                      # Frame limit per stream. 0 means unlimited.
   fps: 0                         # Max per-stream processing/output FPS. 0 means use source FPS.
-  min_score: 0.30                # Detection score threshold.
+  min_score: 0.60                # Detection score threshold.
   nms_iou: 0.60                  # NMS IoU threshold.
   max_detections: 50             # Max detections kept per frame after NMS.
 
