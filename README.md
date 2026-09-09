@@ -59,7 +59,19 @@ browser without changing anything else.
 
 ## Preview
 
-![Adaptive resolution object detection preview](docs/preview.png)
+The chooser on `:8080`. Each pipeline states what it is, why you would pick it,
+its trade-off, and its measured stream capacity at 30 fps:
+
+![Pipeline chooser](docs/pipeline-chooser.png)
+
+A pipeline's control panel — add RTSP cameras or Insight videos while it runs,
+and watch per-stream source resolution, delivered resolution, FPS and bitrate:
+
+![Live-Add control panel](docs/live-add-panel.png)
+
+Detections arriving in Neat Insight, one channel per stream:
+
+![Detections in Neat Insight](docs/insight-detections.png)
 
 ## Install
 
