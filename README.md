@@ -8,9 +8,9 @@ resolution and frame rate live.
 ## What you need
 
 A **SiMa.ai Modalix DevKit** — detection runs on the board.
-There is no way to run this without one.
 
-On the host, set these up in order before anything below:
+On the host — skip either if you already have it, otherwise install them in
+this order:
 
 1. **sima-cli** —
    [installation guide](https://developer.sima.ai/software/tools/sima-cli/)
