@@ -7,10 +7,18 @@ resolution and frame rate live.
 
 ## What you need
 
-- a **SiMa.ai Modalix DevKit** — detection runs on the board
-- a **Neat SDK container** on a host the board can reach over the network
+A **SiMa.ai Modalix DevKit** — detection runs on the board.
+There is no way to run this without one.
 
-There is no way to run this without the board.
+On the host, set these up in order before anything below:
+
+1. **sima-cli** —
+   [installation guide](https://developer.sima.ai/software/tools/sima-cli/)
+2. **The Neat SDK**, installed *and* configured with **DevKit sync** —
+   [development environment setup](https://developer.sima.ai/software/getting-started/dev-environment/)
+
+DevKit sync is the step that shares the SDK container's workspace with the board
+at the same path on both sides. The pipelines run from that share.
 
 ## One-time setup
 
